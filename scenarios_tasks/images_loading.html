@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imageloading</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+            border-radius: 5px;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+        }
+        .grid img{
+            border-radius: 5px;
+            width: 100%;         
+        }
+        @keyframes fadeIn{
+            from{opacity:0}
+            to{opacity:1}
+        }
+        @keyframes fadeOut{
+            from{opacity:1}
+            to{opacity:0}
+        }
+        @keyframes bounce{
+            0%{transform:translateY(0);}
+            50%{transform:translatey(-20px);}
+            100%{transform:translate(0);}
+        }
+        .img{
+            animation: fadeIn 5s ease-in;
+        }
+        #img-1:hover{
+            animation: fadeOut 2s ease-out;
+        }
+        #img-2:hover{
+            animation: bounce 2s ;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <img  id="img-1" class="img" src="../images/computer-1.webp" alt="">
+        <img id="img-2" class="img"  src="../images/computer-2.webp" alt="">
+        <img id="img-3" class="img"  src="../images/laptop-1.webp" alt="">
+        <img id="img-4"  class="img" src="../images/laptop-2.webp" alt="">
+        <img id="img-5"  class="img" src="../images/phone-1.jpg" alt="">
+        <img id="img-6"  class="img" src="../images/phone-2.webp" alt="">
+        <img id="img-7"  class="img" src="../images/watch-1.webp" alt="">
+        <img id="img-8"  class="img" src="../images/watch-2.webp" alt="">
+        <img  id="img-9" class="img" src="../images/watch-3.webp" alt="">
+        <img id="img-10"  class="img" src="../images/image.png" alt="">
+    </div>
+</body>
+</html>

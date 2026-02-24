@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animation Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100vh;
+      background: #F8FAFC;
+    }
+
+    .box {
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    /* Fade In */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    .fadeIn {
+      background: #4F46E5; /* Indigo */
+      animation: fadeIn 2s ease-in forwards;
+    }
+
+    /* Fade Out */
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to   { opacity: 0; }
+    }
+    .fadeOut {
+      background: #14B8A6; /* Teal */
+      animation: fadeOut 2s ease-out forwards;
+    }
+
+    /* Slide In */
+    @keyframes slideIn {
+      from { transform: translateX(-100px); opacity: 0; }
+      to   { transform: translateX(0); opacity: 1; }
+    }
+    .slideIn {
+      background: #F59E0B; /* Amber */
+      animation: slideIn 2s ease-in-out forwards;
+    }
+
+    /* Bounce */
+    @keyframes bounce {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-30px); }
+      100% { transform: translateY(0); }
+    }
+    .bounce {
+      background: #0F172A; /* Deep slate */
+      animation: bounce 1s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="box fadeIn">Fade In</div>
+  <div class="box fadeOut">Fade Out</div>
+  <div class="box slideIn">Slide In</div>
+  <div class="box bounce">Bounce</div>
+</body>
+</html>

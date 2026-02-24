@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-areas: "header header" "sidebar main" "footer footer";
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap: 10px;
+        }
+        .header{
+            grid-area: header; background:lightcoral; }
+            .sidebar{grid-area: sidebar; background: lightgreen;}
+            .main{grid-area: main; background: lightblue;}
+           .footer{ grid-area: footer; background: lightgray;}
+          .widgets { grid-area: widgets; background: rgb(224, 224, 18); }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="header">header</div>
+        <div class="sidebar">sidebar</div>
+        <div class="main">main</div>
+        <div class="widgets">Widgets</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

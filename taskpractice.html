@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightgoldenrodyellow;
+        }
+        .hero{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+            background: whitesmoke;
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero h1{
+            margin-bottom: 10px;
+            font-weight: bold;
+            
+        }
+        .hero div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero img{
+            width: 100%;
+        }
+        .features{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+        .feature{
+            border: 2px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+            gap: 15px;
+            padding: 40px;
+            border: 2px solid pink;
+        }
+        .gallery img{
+            border-radius: 10px;
+            width: 100%;
+        }
+        .pricing{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 10px;
+            padding: 0 10px;
+        }
+        .price{
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        footer{
+            background-color: lightgray;
+            color: white;
+            text-align: center;
+            position: sticky;
+            bottom: 0px;
+            left: 0;
+        }
+        @media (max-width:760px){
+            .hero{
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div>
+            <h1>Revolution</h1>
+            <p>save your time</p>
+            <button>get Started</button>
+        </div>
+        <img src="images/p1.webp" alt="productimg">
+    </section>
+    <section class="features">
+        <div class="feature">fast performance</div>
+        <div class="feature">Secure</div>
+        <div class="feature">Accessibility</div>
+        <div class="feature">Accessibility</div>
+        <div class="feature">Accessibility</div>
+        <div class="feature">Accessibility</div>
+    </section>
+    <section class="gallery">
+        <img src="images/p1.webp" alt="">
+        <img src="images/p1.webp" alt="">
+        <img src="images/p1.webp" alt="">
+        <img src="images/p1.webp" alt="">
+        <img src="images/p1.webp" alt="">
+        <img src="images/p1.webp" alt="">
+        <img src="images/p1.webp" alt="">
+    </section>
+    <section class="pricing">
+        <div class="price"><h3>base plan</h3> <p>$30</p></div>
+        <div class="price"><h3>base plan</h3> <p>$30</p></div>
+        <div class="price"><h3>base plan</h3> <p>$30</p></div>
+        <div class="price"><h3>base plan</h3> <p>$30</p></div>
+    </section>
+    <footer>
+        <p>&copy; All rights reserved to xxx 2026.</p>
+    </footer>
+</body>
+</html>

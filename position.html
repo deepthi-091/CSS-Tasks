@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Position Demo</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 2000px; /* make page scrollable */
+}
+
+/* Common box styling */
+.box {
+  padding: 20px;
+  margin: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+/* 1. Static */
+.static {
+  position: static;
+  background: steelblue;
+}
+
+/* 2. Relative */
+.relative {
+  position: relative;
+  top: 30px;   /* moves down */
+  right: 30px;  /* moves right */
+  background: seagreen;
+  z-index: 10;
+}
+
+/* 3. Absolute */
+.container {
+  position: relative;/* important for absolute child */
+  height: 200px;
+  border: 2px dashed gray;
+  margin: 20px;
+}
+.absolute {
+  position: absolute;
+  top: 8px;
+  right: 2px;
+  background: tomato;
+}
+
+/* 4. Fixed */
+.fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: darkorange;
+}
+
+/* 5. Sticky */
+.sticky {
+  position: sticky;
+  top: 0;
+  background: purple;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS Position Demo</h2>
+
+<div class="box static">Static Position (default)</div>
+
+<div class="box relative">Relative Position (shifted)</div>
+
+<div class="container">
+  <div class="box absolute">Absolute Position (inside container)</div>
+  <p>Container with dashed border. The red box is positioned absolutely inside it.</p>
+</div>
+
+<div class="box sticky">Sticky Position (scroll to see me stick)</div>
+
+<p>Scroll down to see how sticky and fixed behave. Keep scrolling...</p>
+
+<div class="box fixed">Fixed Position (always bottom-right)</div>
+
+</body>
+</html>

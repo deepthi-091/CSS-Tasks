@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Box 1 - lower z-index */
+.box1 {
+  background: steelblue;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+}
+
+/* Box 2 - higher z-index */
+.box2 {
+  background: tomato;
+  top: 100px;
+  left: 100px;
+  z-index: 15;
+}
+
+/* Box 3 - even higher */
+.box3 {
+  background: seagreen;
+  top: 150px;
+  left: 150px;
+  z-index: 10;
+}
+</style>
+</head>
+<body>
+<div class="box box1">Box 1 (z-index: 1)</div>
+<div class="box box2">Box 2 (z-index: 5)</div>
+<div class="box box3">Box 3 (z-index: 10)</div>
+</body>
+</html>

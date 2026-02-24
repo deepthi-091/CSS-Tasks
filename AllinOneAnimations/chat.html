@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatting</title>
+    <style>
+        .chat{
+            display: flex;
+            gap: 5px;    
+        }
+        .chat span{
+            width: 5px;
+            height: 30px;
+            background-color: rgb(179, 255, 0); 
+            animation: chat 0.5s ease infinite;  
+        }
+        .chat span:nth-child(2){animation-delay: 0.2s;}
+        .chat span:nth-child(4){animation-delay: 0.2s;}
+        @keyframes chat{
+            0%,100%{ transform: scaleY(0);}
+            50%{transform: scaleY(0.8);}           
+        }
+    </style>
+</head>
+<body>
+    <div class="chat">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

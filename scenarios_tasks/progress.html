@@ -1,0 +1,43 @@
+<div class="bars">
+  <span></span><span></span><span></span><span></span>
+</div>
+
+<br> <br>
+<div class="pulse"></div>
+<style>
+.bars {
+  display: flex;
+  gap: 6px;
+}
+.bars span {
+  width: 6px;
+  height: 20px;
+  background: #F59E0B;
+  animation: grow 0.6s infinite;
+}
+.bars span:nth-child(2) { animation-delay: 0.2s; }
+.bars span:nth-child(3) { animation-delay: 0.4s; }
+.bars span:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes grow {
+  0%, 100% { transform: scaleY(0.5); }
+  50%      { transform: scaleY(1.5); }
+}
+
+
+.pulse {
+  width: 40px;
+  height: 40px;
+  background: #14B8A6;
+  border-radius: 50%;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); opacity: 1; }
+  50%  { transform: scale(1.5); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+
+</style>

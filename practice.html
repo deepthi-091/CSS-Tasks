@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Landing Page</title>
+  <style>
+    /* 🎨 Color System */
+    :root {
+      --color-bg: #F8FAFC;
+      --color-surface: #FFFFFF;
+      --color-text: #0F172A;
+      --color-muted: #64748B;
+      --color-border: #E2E8F0;
+      --color-primary: #4F46E5;
+      --color-secondary: #14B8A6;
+      --color-accent: #F59E0B;
+    }
+
+    /* Base Styles */
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+    }
+    h1, h2, h3 {
+      font-weight: bold;
+    }
+    p {
+      color: var(--color-muted);
+    }
+    section {
+      padding: 60px 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      background: var(--color-surface);
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .hero button {
+      background: var(--color-primary);
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .hero button:hover {
+      transform: translateY(-3px);
+    }
+    .hero img {
+      width: 100%;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    /* Features Grid */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .feature {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Pricing Grid */
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .plan {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .plan:hover {
+      transform: translateY(-5px);
+    }
+    .plan h3 {
+      color: var(--color-primary);
+    }
+
+    /* Footer Grid */
+    footer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      padding: 20px;
+    }
+    footer div {
+      color: var(--color-muted);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Accessibility: reduce motion */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>Revolutionize Your Workflow</h1>
+      <p>Our product helps you save time and boost productivity.</p>
+      <button>Get Started</button>
+    </div>
+    <img src="https://via.placeholder.com/400" alt="Product Image">
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature">⚡ Fast Performance</div>
+    <div class="feature">🔒 Secure</div>
+    <div class="feature">🌍 Accessible Anywhere</div>
+    <div class="feature">💡 Easy to Use</div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <img src="https://via.placeholder.com/300" alt="Gallery Image 1">
+    <img src="https://via.placeholder.com/300" alt="Gallery Image 2">
+    <img src="https://via.placeholder.com/300" alt="Gallery Image 3">
+    <img src="https://via.placeholder.com/300" alt="Gallery Image 4">
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing">
+    <div class="plan">
+      <h3>Basic</h3>
+      <p>$9/month</p>
+    </div>
+    <div class="plan">
+      <h3>Pro</h3>
+      <p>$19/month</p>
+    </div>
+    <div class="plan">
+      <h3>Premium</h3>
+      <p>$29/month</p>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div>About Us</div>
+    <div>Links</div>
+    <div>Contact</div>
+  </footer>
+
+</body>
+</html>
