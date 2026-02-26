@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="flexbox.css">
+    <style>
+        .horizontal-navbar{
+            display: flex;
+            justify-content: center;
+        }
+        @media (max-width:300px ){
+            .horizontal-navbar{
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
     <section class="horizontal-navbar">
